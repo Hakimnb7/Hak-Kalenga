@@ -1,0 +1,668 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAK-KALENGA EVENT PRIVATE COMPANY</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{	
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND EFFECTS */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#06b6d4;
+    filter:blur(180px);
+    opacity:0.2;
+    top:-150px;
+    right:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#8b5cf6;
+    filter:blur(180px);
+    opacity:0.2;
+    bottom:-150px;
+    left:-150px;
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#06b6d4;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#06b6d4;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 40px 60px;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-left{
+    max-width:600px;
+}
+
+.hero-left h1{
+    font-size:64px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-left span{
+    color:#06b6d4;
+}
+
+.hero-left p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:14px;
+    background:#06b6d4;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-right:10px;
+}
+
+.btn:hover{
+    background:#0891b2;
+    transform:translateY(-2px);
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#06b6d4;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+.icon{
+    font-size:50px;
+}
+
+/* SECTION */
+
+.section{
+    padding:100px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#cbd5e1;
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* INTERNSHIP */
+
+.internship-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.internship-item{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:18px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+/* FORM */
+
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:24px;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:14px;
+    background:white
+    color:black;      
+}   
+
+.form-box textarea{
+    resize:none;
+    height:140px;
+}
+
+/* PACKAGES */
+
+.packages{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.package{
+    background:rgba(255,255,255,0.08);
+    padding:35px;
+    border-radius:24px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.package h3{
+    font-size:32px;
+    color:#06b6d4;
+}
+
+.package-price{
+    font-size:48px;
+    margin:20px 0;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.stat h3{
+    font-size:48px;
+    color:#06b6d4;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+footer h3{
+    font-size:30px;
+    margin-bottom:15px;
+    color:#06b6d4;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-left h1{
+        font-size:42px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:36px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+    <div class="logo">
+        HAK-KALENGA EVENT PRIVATE COMPANY
+    </div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#internships">Internships</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-left">
+
+        <h1>
+            HAK-KALENGA
+            <span>EVENT PRIVATE COMPANY</span>
+        </h1>
+
+        <p>
+            "Creating Menories. Building Futures."
+        </p>
+
+        <p>
+            We organize unforgettable graduation ceremonies,
+            luxury weddings, corporate events and provide
+            internship opportunities across multiple domains.
+        </p>
+
+        <button class="btn">
+            Book Event
+        </button>
+
+        <button class="btn">
+            Apply Internship
+        </button>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Graduation Events</h3>
+            <p>
+                Professional graduation ceremony planning
+                and management.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💍</div>
+            <h3>Luxury Weddings</h3>
+            <p>
+                Premium wedding planning and unforgettable
+                experiences.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💼</div>
+            <h3>Internships</h3>
+            <p>
+                Internship opportunities in technology,
+                business and creative domains.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Career Growth</h3>
+            <p>
+                Building futures through professional
+                development programs.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+    <div class="section-title">
+        <h2>Our Services</h2>
+
+        <p>
+            Complete event management and career support
+            solutions for students, families and organizations.
+        </p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Graduation Ceremonies</h3>
+            <p>
+                Stage setup, certificates, photography,
+                live streaming and guest management.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💍</div>
+            <h3>Wedding Ceremonies</h3>
+            <p>
+                Venue booking, decoration, catering,
+                entertainment and luxury wedding planning.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏢</div>
+            <h3>Corporate Events</h3>
+            <p>
+                Professional conferences, networking
+                events and award ceremonies.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📸</div>
+            <h3>Photography</h3>
+            <p>
+                Professional photography and videography
+                services for all events.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INTERNSHIPS -->
+
+<section class="section" id="internships">
+
+    <div class="section-title">
+
+        <h2>Internship Programs</h2>
+
+        <p>
+            Internship opportunities across multiple
+            professional domains.
+        </p>
+
+    </div>
+
+    <div class="internship-grid">
+
+        <div class="internship-item">Web Development</div>
+        <div class="internship-item">Artificial Intelligence</div>
+        <div class="internship-item">Cybersecurity</div>
+        <div class="internship-item">Graphic Design</div>
+        <div class="internship-item">Marketing</div>
+        <div class="internship-item">Finance</div>
+        <div class="internship-item">Data Science</div>
+        <div class="internship-item">Video Editing</div>
+
+    </div>
+
+</section>
+
+<!-- PACKAGES -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>Event Packages</h2>
+
+        <p>
+            Flexible packages for weddings,
+            graduation ceremonies and events.
+        </p>
+
+    </div>
+
+    <div class="packages">
+
+        <div class="package">
+
+            <h3>Silver</h3>
+
+            <div class="package-price">
+                $999
+            </div>
+
+            <p>Basic Decoration</p>
+            <p>Photography</p>
+            <p>Guest Support</p>
+
+        </div>
+
+        <div class="package">
+
+            <h3>Gold</h3>
+
+            <div class="package-price">
+                $2999
+            </div>
+
+            <p>Premium Decoration</p>
+            <p>Catering</p>
+            <p>Photography & Video</p>
+
+        </div>
+
+        <div class="package">
+
+            <h3>Platinum</h3>
+
+            <div class="package-price">
+                $7999
+            </div>
+
+            <p>Luxury Planning</p>
+            <p>VIP Management</p>
+            <p>Complete Event Experience</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="section">
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3>500+</h3>
+            <p>Events Organized</p>
+        </div>
+
+        <div class="stat">
+            <h3>2000+</h3>
+            <p>Students Supported</p>
+        </div>
+
+        <div class="stat">
+            <h3>120+</h3>
+            <p>Partner Institutions</p>
+        </div>
+
+        <div class="stat">
+            <h3>95%</h3>
+            <p>Client Satisfaction</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Ready to organize your event or
+            start your internship journey?
+        </p>
+
+    </div>
+
+    <div class="form-box">
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <select>
+            <option>Select Service</option>
+            <option>Graduation Ceremony</option>
+            <option>Wedding Ceremony</option>
+            <option>Internship Program</option>
+            <option>Corporate Event</option>
+        </select>
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button class="btn">
+            Send Message
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        HAK-KALENGA EVENT PRIVATE COMPANY
+    </h3>
+
+    <p>
+        "Creating Menories. Building Futures."
+    </p>
+
+    <br>
+	
+    <p>
+        © 2026 HAK-KALENGA EVENT PRIVATE COMPANY.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
