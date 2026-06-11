@@ -1,12 +1,12 @@
-# Ameer Abdelkareem Osman | Portfolio
+# Emmanuel Hakim Yuasa Yupet | Cyber Security & Forensics Professional
 
-This is my personal portfolio website. It showcases my projects, technical skills, experience, education, and contact details in one place.
+This portfolio website showcases cybersecurity, digital forensics, incident response, threat intelligence, and professional services in one place.
 
 ## About
 
-- Name: Ameer Abdelkareem Osman
-- Role: Full Stack Developer
-- Focus: Web development, IT support, API integration, and practical software projects
+- Name: Emmanuel Hakim Yuasa Yupet
+- Role: Cyber Security & Forensics Professional
+- Focus: Incident response, digital investigations, network security, threat intelligence, and security governance
 
 ## Features
 
@@ -16,7 +16,7 @@ This is my personal portfolio website. It showcases my projects, technical skill
 - Skills section with icons, logos, and fallback visuals
 - Contact section with email, phone, LinkedIn, and CV download
 - Mobile-friendly design
-- Black and glass-style theme with a subtle water effect
+- Bright, modern security-themed design with responsive sections and polished cards
 
 ## Tech Stack
 
@@ -33,8 +33,8 @@ This is my personal portfolio website. It showcases my projects, technical skill
 - `assets/css/style.css` - custom styling
 - `assets/img/` - images, logos, and project thumbnails
 - `assets/vendor/typed.js/` - typed text animation library
-- `Resume.pdf` - my CV
-- `ameer.png` - profile photo
+- `Resume.pdf` - professional resume
+- Profile area is intentionally left empty for your later photo update
 
 ## Run Locally
 
@@ -59,9 +59,9 @@ http://127.0.0.1:8000/
 
 ## Contact
 
-- LinkedIn: [Ameer Abdelkareem Osman](https://in.linkedin.com/in/ameer-abdelkareem-osman-9877a72b4)
+- LinkedIn: [Emmanuel Hakim Yuasa Yupet](https://in.linkedin.com/in/ameer-abdelkareem-osman-9877a72b4)
 - Email: `darkness.2000.2000.1000@gmail.com`
 
 ## GitHub
 
-- Repository: [ameerabdelkareem](https://github.com/Ameer-coder-2000/ameerabdelkareem)
+- Repository: [Hakimnb7 / Hak-Kalenga](https://github.com/Hakimnb7/Hak-Kalenga)
